@@ -12,6 +12,8 @@ namespace Calculators.Tests
     {
         [TestCase(0,0)]
         [TestCase(1,1)]
+        [TestCase(2,1)]
+        [TestCase(7, 13)]
         public void CanCalculateFibonacciValueFor(int n, int expectedValue)
         {
             int result = FibonacciCalculator.Calculate(n);
