@@ -11,11 +11,22 @@ namespace Calculators.Tests
     public class FibonacciTests
     {
         [Test]
-        public void CanCalculateFibonaciValueForZero()
+        public void CanCalculateFibonacciValueForZero()
         {
             int result = FibonacciCalculator.Calculate(0);
 
             Assert.AreEqual(0, result);
+        }
+
+        //TODO: this next is for n=1 but is pretty much the same in structure as the previous one.
+        //May need to refactor it to remove duplication!
+
+        [Test]
+        public void CanCalculateFibonacciValueForOne()
+        {
+            int result = FibonacciCalculator.Calculate(1);
+
+            Assert.AreEqual(1, result);
         }
 
     }
