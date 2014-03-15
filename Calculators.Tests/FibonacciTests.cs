@@ -21,6 +21,12 @@ namespace Calculators.Tests
             Assert.AreEqual(expectedValue, result);
         }
 
+        [Test]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void ShouldThrowExceptionForNLessThanZero()
+        {
+            FibonacciCalculator.Calculate(-1);
+        }
         
     }
 }
