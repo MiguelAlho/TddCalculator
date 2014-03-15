@@ -16,7 +16,7 @@ namespace Calculators.Tests
         [TestCase(-5, 25)]
         public void CanCalculateSquareOf(int n, int expectedResult)
         {
-            int result = SquareCalculator.Calculate(n);
+            int result = SquaringCalculator.Calculate(n);
 
             Assert.AreEqual(expectedResult, result);
         }
