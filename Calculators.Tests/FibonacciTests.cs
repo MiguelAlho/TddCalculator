@@ -22,7 +22,9 @@ namespace Calculators.Tests
         }
 
         [Test]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentOutOfRangeException), 
+            ExpectedMessage= FibonacciCalculator.NEGATIVE_ORDINAL_ERRMSG,      
+            MatchType =  MessageMatch.Regex)]
         public void ShouldThrowExceptionForNLessThanZero()
         {
             FibonacciCalculator.Calculate(-1);

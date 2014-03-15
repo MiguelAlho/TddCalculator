@@ -8,10 +8,12 @@ namespace Calculators
 {
     public class FibonacciCalculator
     {
+        public const string NEGATIVE_ORDINAL_ERRMSG = "Can only calculate Fibonaci values for positive integers.";
+
         public static int Calculate(int n)
         {
             if(n<0)
-                throw new ArgumentOutOfRangeException("Can only calculate Fibonaci values for positive integers.");
+                throw new ArgumentOutOfRangeException("n", NEGATIVE_ORDINAL_ERRMSG);
 
              if (n == 0)
                 return 0;
