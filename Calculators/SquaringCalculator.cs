@@ -7,11 +7,16 @@ using Calculators.Interfaces;
 
 namespace Calculators
 {
-    public class SquaringCalculator 
+    public class SquaringCalculator : IOrdinalCalculator
     {
         public static int CalculateFor(int n)
         {
             return n*n;
+        }
+
+        public int Calculate(int n)
+        {
+            throw new NotImplementedException();
         }
     }
 }
