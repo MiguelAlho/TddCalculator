@@ -16,7 +16,7 @@ namespace Calculators
 
         public int Calculate(int n)
         {
-            throw new NotImplementedException();
+            return CalculateFor(n);
         }
     }
 }
