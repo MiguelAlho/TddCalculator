@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Calculators.Interfaces;
 
 namespace Calculators
 {
-    public class FibonacciCalculator
+    public class FibonacciCalculator : IOrdinalCalculator
     {
         public const string NEGATIVE_ORDINAL_ERRMSG = "Can only calculate Fibonaci values for positive integers.";
 
-        public static int Calculate(int n)
+        public int Calculate(int n)
         {
             if(n<0)
                 throw new ArgumentOutOfRangeException("n", NEGATIVE_ORDINAL_ERRMSG);
