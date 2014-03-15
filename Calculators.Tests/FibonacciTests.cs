@@ -10,6 +10,16 @@ namespace Calculators.Tests
     [TestFixture]
     public class FibonacciTests
     {
+        public void CanCreateInstanceOfFibonacciCalculator()
+        {
+            var instance = new FibonacciCalculator();
+
+            Assert.IsNotNull(instance);
+            Assert.IsInstanceOf<IOrdinalCalculator>(instance);
+            Assert.IsInstanceOf<FibonacciCalculator>(instance);
+        }
+
+
         [TestCase(0,0)]
         [TestCase(1,1)]
         [TestCase(2,1)]
