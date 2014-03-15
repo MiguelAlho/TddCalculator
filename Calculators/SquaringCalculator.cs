@@ -11,7 +11,7 @@ namespace Calculators
 
         public static int Calculate(int n)
         {
-            throw new NotImplementedException();
+            return n*n;
         }
     }
 }
