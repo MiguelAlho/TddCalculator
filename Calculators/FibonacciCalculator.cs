@@ -10,9 +10,10 @@ namespace Calculators
     {
         public static int Calculate(int n)
         {
-            //TODO: do we need to treat n<0 ????
+            if(n<0)
+                throw new ArgumentOutOfRangeException("Can only calculate Fibonaci values for positive integers.");
 
-            if (n == 0)
+             if (n == 0)
                 return 0;
             if (n == 1)
                 return 1;
