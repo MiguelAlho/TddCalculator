@@ -11,7 +11,16 @@ namespace Calculators
     {
         public static IOrdinalCalculator GetInstanceOf(CalculatorType calculatorType)
         {
-            throw new NotImplementedException();
+            IOrdinalCalculator calculator = null;
+
+            switch (calculatorType)
+            {
+                case CalculatorType.Fibonacci:
+                    calculator = new FibonacciCalculator();
+                    break;
+            }
+
+            return calculator;
         }
     }
 }
