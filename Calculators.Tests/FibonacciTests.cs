@@ -24,8 +24,11 @@ namespace Calculators.Tests
         [TestCase(7, 13)]
         public void CanCalculateFibonacciValueFor(int n, int expectedValue)
         {
-            int result = FibonacciCalculator.Calculate(n);
-
+            //arrange
+            var calculator = new FibonacciCalculator();
+            //act
+            int result = calculator.Calculate(n);
+            //assert
             Assert.AreEqual(expectedValue, result);
         }
 
@@ -35,7 +38,10 @@ namespace Calculators.Tests
             MatchType =  MessageMatch.Regex)]
         public void ShouldThrowExceptionForNLessThanZero()
         {
-            FibonacciCalculator.Calculate(-1);
+            //arrange
+            var calculator = new FibonacciCalculator();
+            //act
+            calculator.Calculate(-1);
         }
         
     }
