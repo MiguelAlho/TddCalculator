@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculatorFactory.cs" />
+    <Compile Include="CalculatorType.cs" />
     <Compile Include="FibonacciCalculator.cs" />
     <Compile Include="Interfaces\IOrdinalCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

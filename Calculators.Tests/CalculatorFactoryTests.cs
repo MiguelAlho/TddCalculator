@@ -14,7 +14,7 @@ namespace Calculators.Tests
         [Test]
         public void CanGetInstanceOfFibonacciCalculator()
         {
-            IOrdinalCalculator calculator = CalculatorFactory.GetInstanceOf(CalculatorType.Fibonaci);
+            IOrdinalCalculator calculator = CalculatorFactory.GetInstanceOf(CalculatorType.Fibonacci);
 
             Assert.IsNotNull(calculator);
             Assert.IsInstanceOf<FibonacciCalculator>(calculator);
