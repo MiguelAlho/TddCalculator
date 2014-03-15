@@ -19,5 +19,14 @@ namespace Calculators.Tests
             Assert.IsNotNull(calculator);
             Assert.IsInstanceOf<FibonacciCalculator>(calculator);
         }
+
+        [Test]
+        public void CanGetInstanceOfSquaringCalculator()
+        {
+            IOrdinalCalculator calculator = CalculatorFactory.GetInstanceOf(CalculatorType.Squaring);
+
+            Assert.IsNotNull(calculator);
+            Assert.IsInstanceOf<SquaringCalculator>(calculator);
+        }
     }
 }
