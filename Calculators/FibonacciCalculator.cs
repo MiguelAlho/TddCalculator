@@ -12,6 +12,8 @@ namespace Calculators
         {
             if (n == 0)
                 return 0;
+            if (n == 1)
+                return 1;
 
             throw new NotImplementedException("no logic for this yet");
         }
