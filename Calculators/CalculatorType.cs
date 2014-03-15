@@ -8,6 +8,7 @@ namespace Calculators
 {
     public enum CalculatorType
     {
-        Fibonacci
+        Fibonacci,
+        Squaring
     }
 }

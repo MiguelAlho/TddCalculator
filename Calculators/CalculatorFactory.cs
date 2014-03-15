@@ -18,6 +18,9 @@ namespace Calculators
                 case CalculatorType.Fibonacci:
                     calculator = new FibonacciCalculator();
                     break;
+                case CalculatorType.Squaring:
+                    calculator = new SquaringCalculator();
+                    break;
             }
 
             return calculator;
