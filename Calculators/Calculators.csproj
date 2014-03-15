@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FibonacciCalculator.cs" />
+    <Compile Include="Interfaces\IOrdinalCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SquaringCalculator.cs" />
   </ItemGroup>

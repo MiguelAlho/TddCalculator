@@ -1,15 +1,13 @@
-﻿using NUnit.Framework;
+﻿using Calculators.Interfaces;
+using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculators.Tests
 {
     [TestFixture]
-    public class FibonacciTests
+    public class FibonacciCalculatorTests
     {
+        [Test]
         public void CanCreateInstanceOfFibonacciCalculator()
         {
             var instance = new FibonacciCalculator();
