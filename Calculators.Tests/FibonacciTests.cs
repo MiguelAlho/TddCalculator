@@ -10,12 +10,12 @@ namespace Calculators.Tests
     [TestFixture]
     public class FibonacciTests
     {
-        [Test]
-        public void CanCalculateFibonacciValueForZero()
+        [TestCase(0,0)]
+        public void CanCalculateFibonacciValueFor(int n, int expectedValue)
         {
-            int result = FibonacciCalculator.Calculate(0);
+            int result = FibonacciCalculator.Calculate(n);
 
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(expectedValue, result);
         }
 
         //TODO: this next is for n=1 but is pretty much the same in structure as the previous one.
