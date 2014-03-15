@@ -11,22 +11,14 @@ namespace Calculators.Tests
     [TestFixture]
     public class CalculatorFactoryTests
     {
-        [Test]
-        public void CanGetInstanceOfFibonacciCalculator()
+        [TestCase(CalculatorType.Fibonacci, typeof(FibonacciCalculator))]
+        [TestCase(CalculatorType.Squaring, typeof(SquaringCalculator))]
+        public void CanGetInstanceOfCalculator(CalculatorType calcTypeEnum, Type expectedType)
         {
-            IOrdinalCalculator calculator = CalculatorFactory.GetInstanceOf(CalculatorType.Fibonacci);
+            IOrdinalCalculator calculator = CalculatorFactory.GetInstanceOf(calcTypeEnum);
 
             Assert.IsNotNull(calculator);
-            Assert.IsInstanceOf<FibonacciCalculator>(calculator);
-        }
-
-        [Test]
-        public void CanGetInstanceOfSquaringCalculator()
-        {
-            IOrdinalCalculator calculator = CalculatorFactory.GetInstanceOf(CalculatorType.Squaring);
-
-            Assert.IsNotNull(calculator);
-            Assert.IsInstanceOf<SquaringCalculator>(calculator);
+            Assert.IsInstanceOf(expectedType, calculator);
         }
     }
 }
